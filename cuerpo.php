@@ -18,7 +18,10 @@ $consulta = "SELECT * FROM nombre";
 $resultado = $mysqli->query($consulta);
     while ($fila = $resultado->fetch_row()) {
 echo "<tr>";
-echo "<td>".$fila[0]."</td><td>".$fila[1]."</td><td>".$fila[2]."</td><td>".$fila[4]."</td><td><a href=usuario.php?id_us=".$fila[0]."><span><center><img src=imagenes/edit.png width=35 height=35 /></center></span></a></td>";
+echo "<td>".$fila[0]."</td><td>".$fila[1]."</td><td>".$fila[2]."</td><td>".$fila[4]."</td>
+<td><center>
+<a href=usuario.php?id_us=".$fila[0]."><img src=imagenes/edit.png width=35 height=35 /></a><a href=actualiza.php?borrar=".$fila[0]."><img src=imagenes/borrar.jpg width=35 height=35 /></a>
+</center></td>";
 echo "</tr>";
 
        
