@@ -1,7 +1,8 @@
 <?php
-session_start();
-if($_SESSION["tipo"]=="admin")
-{
+
+
+require("existesession.php");
+
 include("encabezado.php");
 
 include("menu.php");
@@ -10,11 +11,6 @@ include("cuerpo.php");
 
 include("pie.php");
 
-}
-else
-{
 
-header("Location: login.php?valido=No existes");	
-}
 
 ?>

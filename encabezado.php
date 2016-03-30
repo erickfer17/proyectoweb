@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="csstransforms no-csstransforms3d csstransitions"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"><meta title="Mi proyecto WEB">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Checador de Horas</title>
+	<title>Mi proyecto WEB</title>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">

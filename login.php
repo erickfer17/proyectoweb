@@ -1,40 +1,28 @@
-<!--
-		<div id="cmenu">
-		<h1 id="prin">UNAV</h1>
-		<p id="cerses"><a href="clases/cerrar.php" id="cerrar">Cerrar Sesión</a></p>
-		<ul id="menu">
-				<center>
-				<li><a href="reportes_dep.php?id_us=10&t=1" id="lm">Reportes</a></li>
-				<li><a href="semestre.php?id_us=10&t=1" id="lm">Semestre</a></li>
-				<li><a href="plan_trab.php?id_us=10&t=1" id="lm">Planes</a></li>
-				<li><a href="depto.php?id_us=10&t=1" id="lm">Departamentos</a></li>
-				<li><a href="registrous.php?id_us=10&t=1" id="lm">Registro</a></li>
-				<li><a href="principal.php?id_us=10&t=1" id="lm">Inicio</a></li>
-				</center>
-				</ul></div> -->
-	<div>
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<title>Sesión</title>
+</head>
+<body id="bodylog" >
+		<h1 style="font-size: 50px; color: white; margin-bottom: -10px;"></h1>
 		
+		<div class="box">
+		<h1 class="logtit">Iniciar Sesión</h1>
+		<form method="post"action="valida.php"><?php
+if (isset($_GET["nosession"])) echo "tu usuario y contraseña son incorrectos";
 
-	<form method="post" action="valida.php">
-	<fieldset>
-	<legend>MI login</legend>
-
-		<label>Nombre:</label>
-		<input type=text name="nombre"><br>
-		<label>Contrasena</label>
-		<input type=password name="contrasena"><br>
-		<input type=submit value=enviar>
-
-	</fieldset>
-		
-
-	</form>
-
-
-
-
-
-
-
-
+?>
+		<input type="text" name="nombre" placeholder="Usuario" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" required/>
+		  
+		<input type="password" name="contrasena" placeholder="contraseña" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" required/>
+		 
+		<div style="margin-left: 120px;"><input type="submit" value="Entrar" id="btn2"/></div>
+		 </form> 
+		</div>  </div>
 		</div>
+	</div>
+	</body>
+</html>

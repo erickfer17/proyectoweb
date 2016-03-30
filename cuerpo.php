@@ -1,20 +1,19 @@
 
 	<div>
 		
-			<center>		
-
-			<?php
-include('config.php');
-
-echo "<table class=responstable>";
-echo "<thead>";
-echo "	<tr>
+			<center>
+			<table class=responstable>";
+<thead>	<tr>
 					<th>ID</th>
 					<th>NOMBRE</th>
 					<th>EDAD</th>
 					<th>TIPO</th>
 					<th>opciones</th>
-					</tr>";
+					</tr>		
+
+			<?php
+include('config.php');
+
 $consulta = "SELECT * FROM nombre";
 $resultado = $mysqli->query($consulta);
     while ($fila = $resultado->fetch_row()) {
@@ -27,11 +26,9 @@ echo "</tr>";
 }
 echo "</table>";
 
-
-
-
-
 			?>
-			<a href="usuario.php?id_us=10&amp;t=1"><button type="submit" class="button" style="margin-bottom: 30%;"><span>Agregar</span></button></a>
+
+
+			<a href="usuario.php"><button type="submit" class="button" style="margin-bottom: 30%;"><span>Agregar</span></button></a>
 				
 		</div>
