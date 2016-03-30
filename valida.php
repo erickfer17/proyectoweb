@@ -5,7 +5,7 @@ include('config.php');
 
 $nombre=$_POST["nombre"];
 $contra=$_POST["contrasena"];
-
+//$mysqli->set_charset("utf8");
 $consulta = "SELECT * FROM nombre where nombre='$nombre' and contrasena='$contra'";
 $resultado = $mysqli->query($consulta);
 $fila = $resultado->fetch_row();
