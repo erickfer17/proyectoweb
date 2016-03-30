@@ -13,9 +13,8 @@ $fila = $resultado->fetch_row();
 
 if ($fila[2]){
 	$valido=1;
-	$tipo=$fila[4];
 	session_start();
-	$_SESSION["tipo"]=$tipo;
+	$_SESSION["tipo"]=$fila[4];
 	header("Location: ejemplo2.php?valido=$valido");
 }
 	else{
