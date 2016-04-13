@@ -1,11 +1,24 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "ejemplo");
+
+
+class Conexion
+{
+
+	public function con()
+	{
+		global $mysqli;	
+ $mysqli = new mysqli("localhost", "root", "", "ejemplo");
 
 /* comprobar la conexión */
-if (mysqli_connect_errno()) {
-    printf("Falló la conexión: %s\n", mysqli_connect_error());
-    exit();
+if ($mysqli->connect_errno) {
+    die('Connect Error: ' . $mysqli->connect_errno);
 }
+return $mysqli;
+
+	}
+}
+
+
 
 
 

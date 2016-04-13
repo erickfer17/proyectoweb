@@ -1,5 +1,10 @@
 <?php
 
+
+include_once('config.php');
+
+
+
 class Validacion{
 	public $usuario;
 	public $contrasena;
@@ -10,20 +15,13 @@ public function __construct($usuario, $contrasena)
          $this->contra = $contrasena;
     }
 
- public function valida()
-  											{
+ public function valida(){
 
-$mysqli = new mysqli("localhost", "root", "", "ejemplo");
-
-/* comprobar la conexión */
-if (mysqli_connect_errno()) {
-    printf("Falló la conexión: %s\n", mysqli_connect_error());
-    exit();
-}
-
-
+ $conexionSacadatos = new Conexion();
+ $linkSacadatos = $conexionSacadatos->con();
+ 
 $consulta = "SELECT * FROM nombre where nombre='$this->user' and contrasena='$this->contra'";
-$resultado = $mysqli->query($consulta);
+$resultado = $linkSacadatos->query($consulta);
 $fila = $resultado->fetch_row();
 //$n = $resultado->num_rows();
 
@@ -37,11 +35,8 @@ if ($fila[2]){
 $valido=0;
 header("Location: login.php?valido=$valido");
 }
-
-
   }
-
-
-
 }
+
+
 ?>
