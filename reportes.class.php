@@ -20,7 +20,7 @@ $conexionSacadatos = new Conexion();
 $mysqli = $conexionSacadatos->con();
 
 if ($this->nombre!=="" || $this->edad!=="" || $this->tipo!=="" ){
- $consulta = "SELECT * FROM nombre where nombre='$this->nombre' or edad='$this->edad' or tipo='$this->tipo' ";
+ $consulta = "SELECT * FROM nombre where nombre='$this->nombre' and edad='$this->edad' or tipo='$this->tipo' ";
 }else{
  $consulta = "SELECT * FROM nombre ";
 }

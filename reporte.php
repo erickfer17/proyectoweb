@@ -32,6 +32,19 @@ $tipo="";
 						<option value="cliente" <?php echo $b; ?>>Cliente</option>
 						</select>
 		        </label>
+		         <select class="form-control" placeholder="Odontologo" id="select" value="<?php echo $id_odontologo ?>" name="id_odontologo">
+           
+            <?php 
+            $query2 = "SELECT * from admin WHERE admin.id_odontologo";
+            $resultado2 = $mysqli->query($query2) or die ($mysqli->error);
+            while($row = mysqli_fetch_array($resultado2)){
+           echo  $id_odontologo2=$row['id_odontologo'];
+            $nombre_completo=$row['nombre_completo'];
+            ?>
+           <option <?php if ($id_odontologo2 == $id_odontologo ) echo 'selected'; ?> value="<?php echo $id_odontologo2; ?>"><?php echo $nombre_completo;?></option>
+          <?php }  ?>
+             
+          </select>
 		        <input type="hidden" name="id">
 		       
 		    </div>
