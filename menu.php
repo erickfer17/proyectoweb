@@ -27,9 +27,9 @@
 							</li>
 							<?php }?>
 
-
-							<li><a href="semestre.php?id_us=10&t=1">Semestre</a></li>
 							<li><a href="reportes.php">Reportes</a></li>
+							<li><a href="graficas.php">Graficas</a></li>
+							
 							<li>
 								<a href="cerrarsession.php"><img src="imagenes/sign-out.png" width="35" height="35"></a>
 							</li>
