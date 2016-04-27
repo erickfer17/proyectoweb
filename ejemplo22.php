@@ -7,7 +7,7 @@ include("encabezado.php");
 
 include("menu.php");
 
-include("grafica1.php");
+include("cuerpo22.php");
 
 include("pie.php");
 
